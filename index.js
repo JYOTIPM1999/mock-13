@@ -6,6 +6,7 @@ const UserModel = require("./model/UserModel");
 const cors = require("cors");
 const JobsModel = require("./model/JobsModel");
 const UserAppliedModel = require("./model/Userapplied");
+const port=process.env.PORT || 8080
 
 const app = express();
 
@@ -128,7 +129,7 @@ mongoose
     "mongodb+srv://jyotipm1999:Jyotipm1999@cluster0.iuqdtyd.mongodb.net/jobapp"
   )
   .then(() => {
-    app.listen(8080, () => {
+    app.listen(port, () => {
       console.log("server started on port 8080");
     });
   });
